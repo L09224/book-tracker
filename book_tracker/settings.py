@@ -119,6 +119,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Redirect to the book list after logging in
+LOGIN_REDIRECT_URL = 'book_list'
+
+# Redirect to the login page if not authenticated
+LOGIN_URL = 'login'
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

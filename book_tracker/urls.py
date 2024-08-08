@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.contrib.auth import views as auth_views
+from book_admin import views as book_admin_views  # Import views from book_admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Admin site URL
-    path('books/', include('book_admin.urls')),  # Include the URLs from the book_admin app
+    path('books/', include('book_admin.urls')),  # Include the book_admin app URLs
+    path('accounts/', include('django.contrib.auth.urls')),  # Include Django's auth URLs
+    path('signup/', book_admin_views.signup, name='signup'),  # Sign-up page
 ]
 

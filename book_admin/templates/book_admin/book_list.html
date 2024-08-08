@@ -6,6 +6,15 @@
     <title>All Books</title>
 </head>
 <body>
+
+    <!-- Authentication Links -->
+    {% if user.is_authenticated %}
+        <p>Welcome, {{ user.username }}! <a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+        <p><a href="{% url 'login' %}">Login</a> | <a href="{% url 'signup' %}">Sign Up</a></p>
+    {% endif %}
+
+    <!-- Main Content: List of Books -->
     <h1>All Books</h1>
     <ul>
         {% for book in books %}
@@ -14,5 +23,6 @@
             <li>No books available.</li>
         {% endfor %}
     </ul>
+
 </body>
 </html>
