@@ -4,20 +4,56 @@
 
 {% block content %}
 <h2>My Books</h2>
-<ul>
-    {% for user_book in user_books %}
-    <li>
-        {{ user_book.book.title }} by {{ user_book.book.author }}
-        - Status: {{ user_book.status }}, Pages Read: {{ user_book.current_page }}/{{ user_book.book.total_pages }}
-        <form method="post">
-            {% csrf_token %}
-            <input type="hidden" name="book_id" value="{{ user_book.id }}">
-            <!-- Include any additional form fields or buttons for updating -->
-            <button type="submit">Update</button>
-        </form>
-    </li>
-    {% empty %}
-    <p>You have not added any books yet.</p>
-    {% endfor %}
-</ul>
+
+<!-- Form to Add Books -->
+<h3>Add a Book to Your List</h3>
+<form method="post" action="{% url 'user_book_list' %}">
+    {% csrf_token %}
+    <select name="book_id">
+        {% for book in all_books %}
+        <option value="{{ book.id }}">{{ book.title }} by {{ book.author }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Add Book</button>
+</form>
+
+<!-- Table for Displaying and Updating Books -->
+<form method="post" action="{% url 'user_book_list' %}">
+    {% csrf_token %}
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Status</th>
+                <th>Pages Read</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user_book in user_books %}
+            <tr>
+                <td>{{ user_book.book.title }}</td>
+                <td>{{ user_book.book.author }}</td>
+                <td>
+                    <select name="status_{{ user_book.id }}">
+                        <option value="reading" {% if user_book.status == "reading" %}selected{% endif %}>Reading</option>
+                        <option value="completed" {% if user_book.status == "completed" %}selected{% endif %}>Completed</option>
+                        <option value="on-hold" {% if user_book.status == "on-hold" %}selected{% endif %}>On-hold</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" name="current_page_{{ user_book.id }}" value="{{ user_book.current_page }}">
+                </td>
+                <td>
+                    <button type="submit" name="update_button" value="{{ user_book.id }}">Update</button>
+                </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="5">You have not added any books yet.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</form>
+
 {% endblock %}

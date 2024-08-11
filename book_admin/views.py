@@ -1,12 +1,10 @@
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
-from .models import Book, UserBook
-from .forms import BookForm, UserBookForm
-
-# For login
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from .models import Book, UserBook
+from .forms import BookForm, UserBookForm
 
 # Create your views here.
 
@@ -30,18 +28,23 @@ def book_list(request):
 @login_required
 def user_book_list(request):
     user_books = UserBook.objects.filter(user=request.user)
+    all_books = Book.objects.all()  # Needed for the add book dropdown
 
     if request.method == 'POST':
-        book_id = request.POST.get('book_id')
-        user_book = UserBook.objects.get(id=book_id, user=request.user)
-        form = UserBookForm(request.POST, instance=user_book)
-        if form.is_valid():
-            form.save()
+        if 'book_id' in request.POST:
+            book_id = request.POST.get('book_id')
+            book = Book.objects.get(id=book_id)
+            UserBook.objects.create(user=request.user, book=book, current_page=0, status='reading')
             return redirect('user_book_list')
-    else:
-        form = UserBookForm()
+        elif 'update_button' in request.POST:
+            ub_id = request.POST['update_button']
+            user_book = UserBook.objects.get(id=ub_id, user=request.user)
+            user_book.status = request.POST.get(f'status_{ub_id}', user_book.status)
+            user_book.current_page = request.POST.get(f'current_page_{ub_id}', user_book.current_page)
+            user_book.save()
+            return redirect('user_book_list')
 
-    return render(request, 'book_admin/user_book_list.html', {'user_books': user_books, 'form': form})
+    return render(request, 'book_admin/user_book_list.html', {'user_books': user_books, 'all_books': all_books})
 
 
 def update_progress(request, pk):
@@ -95,4 +98,16 @@ def my_books(request):
         form = UserBookForm()
 
     return render(request, 'book_admin/my_books.html', {'user_books': user_books, 'form': form})  # Ensure this is correct
+
+@login_required
+def add_book_to_list(request):
+    if request.method == 'POST':
+        book_id = request.POST.get('book_id')
+        book = Book.objects.get(id=book_id)
+        # Ensure the user doesn't add the same book multiple times
+        if not UserBook.objects.filter(user=request.user, book=book).exists():
+            UserBook.objects.create(user=request.user, book=book, current_page=0, status='reading')
+        return redirect('user_book_list')
+    return redirect('user_book_list')  # Redirect if the request is not POST
+
 
