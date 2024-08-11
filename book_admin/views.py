@@ -17,6 +17,9 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+def home(request):
+    return render(request, 'book_admin/home.html')
+    
 def add_book(request):
     if request.method == "POST":
         form = BookForm(request.POST)

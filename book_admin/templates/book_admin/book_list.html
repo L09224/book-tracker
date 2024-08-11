@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Books</title>
-</head>
-<body>
+{% extends 'book_admin/base.html' %}
 
-    <!-- Authentication Links -->
-    {% if user.is_authenticated %}
-        <p>Welcome, {{ user.username }}! <a href="{% url 'logout' %}">Logout</a></p>
-    {% else %}
-        <p><a href="{% url 'login' %}">Login</a> | <a href="{% url 'signup' %}">Sign Up</a></p>
-    {% endif %}
+{% block title %}All Books - Book Tracker{% endblock %}
 
-    <!-- Main Content: List of Books -->
-    <h1>All Books</h1>
+{% block content %}
+    <h2>All Books</h2>
     <ul>
         {% for book in books %}
             <li>{{ book.title }} by {{ book.author }}</li>
@@ -23,6 +11,4 @@
             <li>No books available.</li>
         {% endfor %}
     </ul>
-
-</body>
-</html>
+{% endblock %}

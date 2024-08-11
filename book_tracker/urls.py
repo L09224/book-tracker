@@ -24,5 +24,6 @@ urlpatterns = [
     path('books/', include('book_admin.urls')),  # Include the book_admin app URLs
     path('accounts/', include('django.contrib.auth.urls')),  # Include Django's auth URLs
     path('signup/', book_admin_views.signup, name='signup'),  # Sign-up page
+    path('', book_admin_views.home, name='home'),  # Homepage URL
 ]
 
