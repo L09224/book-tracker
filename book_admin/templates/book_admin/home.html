@@ -1,8 +1,24 @@
 {% extends 'book_admin/base.html' %}
 
+{% load static %}
+
 {% block title %}Home - Book Tracker{% endblock %}
 
 {% block content %}
-    <h2>Welcome to Book Tracker</h2>
-    <p>This is your go-to place to track your reading journey. Start by <a href="{% url 'book_list' %}">exploring our book list</a> or <a href="{% url 'add_book' %}">add a new book</a> to our collection.</p>
+<div class="home-container">
+    <div class="home-image">
+        <img src="{% static 'media/images/homepage.jpg' %}" alt="Welcome Image">
+    </div>
+    <div class="home-text">
+        <h2>Welcome to Book Tracker</h2>
+        <p>Welcome to Book Tracker! This is your one-stop shop to keep track of your reading habits. Upon creating an account with us, you will be able to add, update and remove books from your digital library, and keep track of which page you got to. Interested? Sign up below, of if already a customer, Login!</p>
+        {% if not user.is_authenticated %}
+            <div class="button-container">
+                <a href="{% url 'login' %}" class="btn">Login</a>
+                <a href="{% url 'signup' %}" class="btn">Sign Up</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
+

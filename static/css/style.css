@@ -9,7 +9,7 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #4CAF50;
+    background-color: #B08968;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -50,9 +50,77 @@ main {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #4CAF50;
+    background-color: #B08968;
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+
+/* Homepage Styling */
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #EDE0D4;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+
+
+.home-image, .home-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.home-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.home-text {
+    padding: 20px;
+    margin: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px; 
+    justify-content: center;  
+    margin-top: 20px; 
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #7F5539;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;  /* Smooth transition for hover effect */
+    min-width: 120px;
+    flex-grow: 1;
+
+}
+
+.btn:hover {
+    background-color: #45a049;  /* Darker shade on hover for visual feedback */
+}
+
+
+
+
