@@ -111,14 +111,74 @@ footer {
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
-    transition: background-color 0.3s;  /* Smooth transition for hover effect */
+    transition: background-color 0.3s;
     min-width: 120px;
     flex-grow: 1;
 
 }
 
 .btn:hover {
-    background-color: #45a049;  /* Darker shade on hover for visual feedback */
+    background-color: #7F5539;
+}
+
+
+/* Table styling on my books page  */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.add-book-form {
+    margin-bottom: 20px;
+}
+
+.table-cell-content {
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: flex-start; /* Aligns items to the left */
+    width: 100%;
+}
+
+.table-input {
+    width: 50px; /* Fixed width for the current page input */
+    text-align: right;
+}
+
+
+.table-total-pages {
+    width: 40px; /* Fixed width to accommodate up to three digits */
+    text-align: left;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.table-dropdown {
+    width: 130px; /* Fixed width for the dropdown */
+}
+
+.table-submit-button {
+    margin-left: 10px; /* Adds spacing between dropdown and button */
+    white-space: nowrap; /* Ensures the button doesn't wrap to a new line */
 }
 
 

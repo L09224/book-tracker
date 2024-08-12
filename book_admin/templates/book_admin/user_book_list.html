@@ -1,33 +1,59 @@
 {% extends 'book_admin/base.html' %}
 
-{% block title %}My Books{% endblock %}
+{% load static %}
 
 {% block content %}
-<h2>My Books</h2>
+<div class="container">
+    <h2>My Books</h2>
 
-<!-- Form to Add Books -->
-<h3>Add a Book to Your List</h3>
-<form method="post" action="{% url 'user_book_list' %}">
-    {% csrf_token %}
-    <select name="book_id">
-        {% for book in all_books %}
-        <option value="{{ book.id }}">{{ book.title }} by {{ book.author }}</option>
+    <!-- Form to add a new book to the user's list -->
+    <div class="add-book-form">
+        <h3>Add a New Book:</h3>
+        <form method="POST" action="{% url 'add_book_to_user_list' %}">
+            {% csrf_token %}
+            <!-- Dropdown to select the book -->
+            <select name="book" required>
+                {% for book in books %}
+                    <option value="{{ book.id }}">{{ book.title }}</option>
+                {% endfor %}
+            </select>
+    
+            <!-- Input for current page -->
+            <input type="number" name="current_page" placeholder="Current Page" required>
+    
+            <!-- Dropdown to select the reading status -->
+            <select name="status" required>
+                <option value="reading">Reading</option>
+                <option value="completed">Completed</option>
+                <option value="to_read">Plan to Read</option>
+            </select>
+    
+            <!-- Submit button -->
+            <button type="submit" name="action" value="add">Add Book</button>
+        </form>
+    </div>
+    
+
+    <!-- Messages for feedback -->
+    {% if messages %}
+        {% for message in messages %}
+            <div>{{ message }}</div>
         {% endfor %}
-    </select>
-    <button type="submit">Add Book</button>
-</form>
+    {% endif %}
 
-<!-- Table for Displaying and Updating Books -->
-<form method="post" action="{% url 'user_book_list' %}">
-    {% csrf_token %}
+<!-- Displaying the user's specific book list -->
+
+<div class="container">
+    <h2>{{ request.user.username }}'s Book List</h2>
+
+    {% if user_books %}
     <table>
         <thead>
             <tr>
                 <th>Title</th>
                 <th>Author</th>
-                <th>Status</th>
-                <th>Pages Read</th>
-                <th>Update</th>
+                <th>Current Page / Total Pages</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -36,24 +62,45 @@
                 <td>{{ user_book.book.title }}</td>
                 <td>{{ user_book.book.author }}</td>
                 <td>
-                    <select name="status_{{ user_book.id }}">
-                        <option value="reading" {% if user_book.status == "reading" %}selected{% endif %}>Reading</option>
-                        <option value="completed" {% if user_book.status == "completed" %}selected{% endif %}>Completed</option>
-                        <option value="on-hold" {% if user_book.status == "on-hold" %}selected{% endif %}>On-hold</option>
-                    </select>
+                    <form method="POST" action="{% url 'update_progress' user_book.id %}" onsubmit="return handleFormSubmit('{{ user_book.id }}', '{{ user_book.book.total_pages }}')">
+                        {% csrf_token %}
+                        <input type="hidden" name="book" value="{{ user_book.book.id }}">
+                        
+                        <!-- Flex container for alignment -->
+                        <div class="table-cell-content">
+                            <!-- Current page input -->
+                            <input type="number" id="current_page_{{ user_book.id }}" name="current_page" value="{{ user_book.current_page }}" required class="table-input">
+                            <span class="table-total-pages">/ {{ user_book.book.total_pages }}</span>
+                            
+                            <!-- Status dropdown -->
+                            <select id="status_{{ user_book.id }}" name="status" required class="table-dropdown">
+                                <option value="reading" {% if user_book.status == "reading" %}selected{% endif %}>Reading</option>
+                                <option value="completed" {% if user_book.status == "completed" %}selected{% endif %}>Completed</option>
+                                <option value="to_read" {% if user_book.status == "to_read" %}selected{% endif %}>Plan to Read</option>
+                            </select>
+                            
+                            <!-- Update button -->
+                            <button type="submit" name="action" value="update" class="table-submit-button">Update</button>
+                        </div>
+                    </form>
                 </td>
                 <td>
-                    <input type="number" name="current_page_{{ user_book.id }}" value="{{ user_book.current_page }}">
-                </td>
-                <td>
-                    <button type="submit" name="update_button" value="{{ user_book.id }}">Update</button>
+                    <form method="POST" action="{% url 'delete_user_book' user_book.id %}">
+                        {% csrf_token %}
+                        <button type="submit" name="action" value="delete">Delete</button>
+                    </form>
                 </td>
             </tr>
-            {% empty %}
-            <tr><td colspan="5">You have not added any books yet.</td></tr>
             {% endfor %}
         </tbody>
     </table>
-</form>
+    {% else %}
+        <p>You have no books in your list.</p>
+    {% endif %}
+</div>
+
+
+<!-- Include the external JavaScript file for functionality on 'Completed'-->
+<script src="{% static 'js/book_admin.js' %}"></script>
 
 {% endblock %}
