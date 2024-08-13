@@ -9,9 +9,12 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1><a href="{% url 'home' %}" class="site-title">Book Tracker</a></h1>
+<!-- Header -->
+<header>
+    <div class="header-container">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'media/images/logotext_nobg.png' %}" alt="Book Tracker Logo" class="site-logo">
+        </a>
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
@@ -25,8 +28,8 @@
                 {% endif %}
             </ul>
         </nav>
-    </header>
-    
+    </div>
+</header>
 
     <!-- Main Content -->
     <main>
@@ -35,7 +38,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Book Tracker & Leander Ots.</p>
+        <p>&copy; 2024 Book Tracker by Leander Ots</p>
     </footer>
 
 </body>

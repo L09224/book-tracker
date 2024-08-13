@@ -10,41 +10,45 @@ body {
 /* Header Styling */
 header {
     background-color: #B08968;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 20px;
     margin-bottom: 0;
 }
 
-header h1 {
-    margin: 0;
+.header-container {
+    display: flex;
+    align-items: flex-end; /* Align items to the bottom */
+    justify-content: space-between;
+}
+
+.site-logo {
+    height: 100px; /* Adjust the logo size */
+    width: auto;
+    display: block;
+    filter: invert(100%); /* Invert the color to change black to white */
 }
 
 header nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
+    margin: 0;
+    padding: 0 0 10px 0;
+    align-items: flex-end; /* Align nav items to the bottom */
 }
 
 header nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px; /* Increase the font size */
 }
 
 header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Header clickable site title */
-
-.site-title {
-    color: white; 
-    text-decoration: none; 
-}
 
 
 /* Main Content Styling */
@@ -80,8 +84,6 @@ footer {
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
-
-
 .home-image, .home-text {
     flex: 1;
     padding: 20px;
@@ -102,15 +104,21 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-start; 
+}
+
+.home-heading {
+    text-align: center; 
+    width: 100%; 
+    margin-bottom: 20px; 
 }
 
 .button-container {
     display: flex;
-    flex-direction: row; 
-    gap: 20px; 
     justify-content: center;  
+    width: 100%; 
     margin-top: 20px; 
+    gap: 30px;
 }
 
 .btn {
@@ -122,14 +130,12 @@ footer {
     display: inline-block;
     transition: background-color 0.3s;
     min-width: 120px;
-    flex-grow: 1;
-
+    text-align: center; 
 }
 
 .btn:hover {
     background-color: #7F5539;
 }
-
 
 /* My Library page styling */
 
@@ -215,20 +221,21 @@ tr:hover {
 }
 
 /* Style for the sortable table headers */
+
 table th a {
-    color: #333; /* Default color */
-    text-decoration: none; /* Remove underline */
+    color: #333; 
+    text-decoration: none; 
 }
 
 table th a:hover {
-    color: #555; /* Hover color */
-    text-decoration: underline; /* Optional: Add underline on hover */
+    color: #555; 
+    text-decoration: underline; 
 }
 
 table th a.active {
-    color: #B08968; /* Change this to your preferred active color */
-    font-weight: bold; /* Optional: Make it bold */
-    text-decoration: none; /* Ensure no underline */
+    color: #B08968; 
+    font-weight: bold; 
+    text-decoration: none; 
 }
 
 
@@ -257,13 +264,13 @@ table th a.active {
 
 .sorting-options a {
     text-decoration: none;
-    color: #007bff;
+    color: #B08968;
     margin-right: 10px;
 }
 
 .sorting-options a.active {
     font-weight: bold;
-    color: #0056b3;
+    color: #B08968;
 }
 
 .book-list {
