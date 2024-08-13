@@ -1,4 +1,5 @@
 /* General Styling */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,6 +9,7 @@ body {
 }
 
 /* Header Styling */
+
 header {
     background-color: #B08968;
     padding: 10px 20px;
@@ -16,12 +18,12 @@ header {
 
 .header-container {
     display: flex;
-    align-items: flex-end; /* Align items to the bottom */
+    align-items: flex-end; 
     justify-content: space-between;
 }
 
 .site-logo {
-    height: 100px; /* Adjust the logo size */
+    height: 100px; 
     width: auto;
     display: block;
     filter: invert(100%); /* Invert the color to change black to white */
@@ -32,7 +34,7 @@ header nav ul {
     display: flex;
     margin: 0;
     padding: 0 0 10px 0;
-    align-items: flex-end; /* Align nav items to the bottom */
+    align-items: flex-end; 
 }
 
 header nav ul li {
@@ -42,14 +44,12 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px; /* Increase the font size */
+    font-size: 18px; 
 }
 
 header nav ul li a:hover {
     text-decoration: underline;
 }
-
-
 
 /* Main Content Styling */
 main {
@@ -137,6 +137,67 @@ footer {
     background-color: #7F5539;
 }
 
+/* Authentication Pages Styling */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #EDE0D4;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    flex-direction: column;
+}
+
+.auth-container form {
+    width: 100%; 
+}
+
+.auth-container h2 {
+    align-self: flex-start; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    width: 100%; 
+}
+
+.auth-container .form-group {
+    margin-bottom: 15px;
+}
+
+.auth-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.auth-container .form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.auth-container .btn {
+    padding: 10px 20px;
+    background-color: #7F5539;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    min-width: 120px;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%; 
+}
+
+.auth-container .btn:hover {
+    background-color: #A67854;
+}
+
 /* My Library page styling */
 
 .library-hero-image {
@@ -204,7 +265,7 @@ tr:hover {
 
 
 .table-total-pages {
-    width: 40px; /* Fixed width to accommodate up to three digits */
+    width: 40px; /* Fix width to accommodate up to three digits */
     text-align: left;
     display: inline-block;
     margin-left: 5px;
