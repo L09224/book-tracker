@@ -6,7 +6,7 @@
 
     <!-- Hero Image -->
     <div class="hero-image library-hero-image">
-        <img src="{% static 'media/images/mylibrary.jpg' %}" alt="My personal library corner"> <!-- Free License hero image by freestocks @https://unsplash.com/photos/open-book-beside-white-ceramic-teacup-on-saucer-OfaDD5o8hpk-->
+        <img src="{% static 'media/images/mylibrary.jpg' %}" alt="My personal library corner"> <!-- Free License hero image by freestock @https://unsplash.com/photos/open-book-beside-white-ceramic-teacup-on-saucer-OfaDD5o8hpk-->
     </div>
 
     <div class="container">
@@ -54,9 +54,25 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Current Page / Total Pages</th>
+                        <th>
+                            <a href="?sort=book__title&direction={% if sort == 'book__title' and direction == 'asc' %}desc{% else %}asc{% endif %}"
+                               class="{% if sort == 'book__title' %}active{% endif %}">
+                               Title {% if sort == 'book__title' %}({% if direction == 'asc' %}A-Z{% else %}Z-A{% endif %}){% endif %}
+                            </a>
+                        </th>
+                        <th>
+                            <a href="?sort=book__author&direction={% if sort == 'book__author' and direction == 'asc' %}desc{% else %}asc{% endif %}"
+                               class="{% if sort == 'book__author' %}active{% endif %}">
+                               Author {% if sort == 'book__author' %}({% if direction == 'asc' %}A-Z{% else %}Z-A{% endif %}){% endif %}
+                            </a>
+                        </th>
+                        <th>
+                            <a href="?sort=book__total_pages&direction={% if sort == 'book__total_pages' and direction == 'asc' %}desc{% else %}asc{% endif %}"
+                               class="{% if sort == 'book__total_pages' %}active{% endif %}">
+                               Current Page / Total Pages {% if sort == 'book__total_pages' %}({% if direction == 'asc' %}Lowest to Highest{% else %}Highest to Lowest{% endif %}){% endif %}
+                            </a>
+                        </th>
+                        
                         <th>Actions</th>
                     </tr>
                 </thead>

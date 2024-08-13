@@ -214,6 +214,24 @@ tr:hover {
     white-space: nowrap; 
 }
 
+/* Style for the sortable table headers */
+table th a {
+    color: #333; /* Default color */
+    text-decoration: none; /* Remove underline */
+}
+
+table th a:hover {
+    color: #555; /* Hover color */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+table th a.active {
+    color: #B08968; /* Change this to your preferred active color */
+    font-weight: bold; /* Optional: Make it bold */
+    text-decoration: none; /* Ensure no underline */
+}
+
+
 /* 'All Books' page styling */
 
 .hero-image {

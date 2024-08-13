@@ -43,7 +43,20 @@ def book_list(request):
 
 @login_required
 def user_book_list(request):
-    user_books = UserBook.objects.filter(user=request.user)  # Fetch only books associated with the current user
+    # Get sorting parameters from the request
+    sort = request.GET.get('sort', 'book__title')  # Default sorting by book title (A-Z)
+    direction = request.GET.get('direction', 'asc')  # Default direction is ascending
+
+    # Apply sorting to the user_books queryset
+    if sort == 'book__title':
+        user_books = UserBook.objects.filter(user=request.user).order_by('book__title' if direction == 'asc' else '-book__title')
+    elif sort == 'book__author':
+        user_books = UserBook.objects.filter(user=request.user).order_by('book__author' if direction == 'asc' else '-book__author')
+    elif sort == 'book__total_pages':
+        user_books = UserBook.objects.filter(user=request.user).order_by('book__total_pages' if direction == 'asc' else '-book__total_pages')
+    else:
+        user_books = UserBook.objects.filter(user=request.user)
+
     if request.method == 'POST':
         form = UserBookForm(request.POST)
         if form.is_valid():
@@ -57,12 +70,14 @@ def user_book_list(request):
     else:
         form = UserBookForm()
 
-    books = Book.objects.all() 
+    books = Book.objects.all()
 
     return render(request, 'book_admin/user_book_list.html', {
         'user_books': user_books,
         'books': books,  # Passing all books to the dropdown
-        'form': form
+        'form': form,
+        'sort': sort,
+        'direction': direction,
     })
 
 
