@@ -61,6 +61,18 @@ I used the GitHub projects page for my user stories. I started using the project
 
 ### [Link to project board](https://github.com/users/L09224/projects/3/views/1)
 
+## MoSCoW Prioritisation
+
+- Must have: Full CRUD for book updates, user registration and login/log out functionality, ability for users to view and explore books, data security
+- Should have: responsive design, error messages for if things don't work, clear messages for when a book entry is updated
+- Could Have: sort and filter books, different home page message depending on if a user is logged in, logo & favicon, hero images
+- Won't have: footer links for privacy policy and contact info, connection to API for importing books
+
+---
+
+# Features Implemented
+
+
 
 ---
 
