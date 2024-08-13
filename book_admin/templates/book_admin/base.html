@@ -11,13 +11,13 @@
 
     <!-- Header -->
     <header>
-        <h1>Book Tracker</h1>
+        <h1><a href="{% url 'home' %}" class="site-title">Book Tracker</a></h1>
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'book_list' %}">Books</a></li>
-                <li><a href="{% url 'user_book_list' %}">My Books</a></li> 
                 {% if user.is_authenticated %}
+                    <li><a href="{% url 'user_book_list' %}">My Books</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
                     <li><a href="{% url 'login' %}">Login</a></li>
@@ -26,6 +26,7 @@
             </ul>
         </nav>
     </header>
+    
 
     <!-- Main Content -->
     <main>

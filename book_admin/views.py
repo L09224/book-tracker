@@ -29,8 +29,17 @@ def add_book(request):
     return render(request, 'book_admin/add_book.html', {'form': form})
 
 def book_list(request):
-    books = Book.objects.all()
-    return render(request, 'book_admin/book_list.html', {'books': books})
+    sort = request.GET.get('sort', 'title')  # Default sorting by title (A-Z)
+    direction = request.GET.get('direction', 'asc')  # Default direction is ascending
+
+    if sort == 'title':
+        books = Book.objects.all().order_by('title' if direction == 'asc' else '-title')
+    elif sort == 'page_count':
+        books = Book.objects.all().order_by('total_pages' if direction == 'asc' else '-total_pages')
+    else:
+        books = Book.objects.all()
+
+    return render(request, 'book_admin/book_list.html', {'books': books, 'sort': sort, 'direction': direction})
 
 @login_required
 def user_book_list(request):
