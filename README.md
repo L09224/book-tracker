@@ -37,12 +37,21 @@ This site uses three models:
 
 ![Capture1](https://github.com/user-attachments/assets/e7d3d5a0-e5fd-4452-ab89-78d2e33764d5)
 
-- The above served as a MVP guide (created with dbdiagram) for how the data should interact. Ultimately not all of these fields were as useful (e.g. description). This is a MVP structure as intiially i wanted to pull my books from a API. However the decision was made to first focus on a functioning site, before trying to put together more complex features
+- The above served as a MVP guide (created with dbdiagram) for how the data should interact. Ultimately not all of these fields were as useful (e.g. description). This is a MVP structure as initially i wanted to pull my books from an API. However the decision was made to first focus on a functioning site, before trying to put together more complex features
+
+### Design
+![Capture2](https://github.com/user-attachments/assets/6bb9ef93-3c64-4854-87ae-2822615bca7a)
+
+![Capture3](https://github.com/user-attachments/assets/b75bf812-526e-4167-9f6a-b0618680f082)
+
+
 
 
 ---
 
 # Technology used
+- balsamiq - to create the wireframes
+- dbdiagram.io - To create my ERDs
 - Html - for page structure
 - CSS - for custom styling
 - Python - for the backend
@@ -56,7 +65,8 @@ This site uses three models:
 - Favicon.io - for generating my favicon templates from my logo
 - design.com - for letting me generate a logo for the site
 - chatGPT - for troubleshooting when no google-fu solves an issue
-- dbdiagram.io - To create my ERDs
+- 
+- 
 
 
 
