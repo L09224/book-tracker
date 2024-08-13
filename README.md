@@ -1,32 +1,31 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Welcome to Book Tracker!
 
-Welcome,
+## A Book Tracking Website.
+![Capture](https://github.com/user-attachments/assets/249a8159-e07a-45ba-9793-0490367b6cf4)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
 
-## Reminders
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+> Book Tracker is a website that allows the users to add, update and edit books they are reading, or plan on reading.
 
-## Creating the Heroku app
+### [Link to the deployed site](https://book-tracker-lo-007f2790e66f.herokuapp.com/)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+#### - By Leander Ots
 
 ---
 
-Happy coding!
+## Table of contents 
+
+ 1. [ UX ](#ux)
+ 2. [ Agile Development ](#agile-development)
+ 3. [ Features implemented ](#features-implemented)  
+ 4. [ Features Left to Implement ](#features-left-to-implement)  
+ 5. [ Technology used ](#technology-used) 
+ 6. [ Testing ](#testing)  
+ 7. [ Bugs ](#known-bugs)  
+ 8. [ Deployment](#deployment)
+ 9. [ Resources ](#resources)  
+ 10. [ Credits and acknowledgements ](#credits-and-acknowledgements)
+
+---
+
+# Resources
