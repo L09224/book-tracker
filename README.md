@@ -72,6 +72,20 @@ I used the GitHub projects page for my user stories. I started using the project
 
 # Features Implemented
 
+- Home page with login and sign up features
+- Full CRUD functionality on managing books in a user's library
+- Responsive design: the site has been tested for responsive design on widths of 320px, 480px, 768px, 1024px and 1280px
+- Easy to navigate the book list on both the 'books' page and 'my library' page due to the ability to sort alphabetically, by page number or author
+- Consistent styling accross all pages. The user will not see any link or redirect to an admin template
+- CSRF protection
+- Clear messaging for when a user adds, updates or deletes entries on their book list, as well as error messages if something goes wrong
+- 
+![Capture5](https://github.com/user-attachments/assets/5f9c11ae-112c-43e5-9caf-c86bce9c61df)
+![Capture6](https://github.com/user-attachments/assets/a2dc16c7-7519-4e06-be7f-41f78c5168c6)
+
+  
+
+#Features left to implement 
 
 
 ---
