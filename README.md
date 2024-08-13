@@ -13,8 +13,8 @@
 
 ## Table of contents 
 
- 1. [ Planning ](#planning)
- 2. [ UX ](#ux)
+ 1. [ Data Structure Planning ](#data_planning)
+ 2. [ Design Planning ](#design_planning)
  3. [ Agile Development ](#agile-development)
  4. [ Features implemented ](#features-implemented)  
  5. [ Features Left to Implement ](#features-left-to-implement)  
@@ -25,9 +25,7 @@
  10. [ Credits and acknowledgements ](#credits-and-acknowledgements)
 
 ---
-# Planning
-
-### Data Structure
+# Data Structure Planning
 
 This site uses three models:
 
@@ -39,12 +37,21 @@ This site uses three models:
 
 - The above served as a MVP guide (created with dbdiagram) for how the data should interact. Ultimately not all of these fields were as useful (e.g. description). This is a MVP structure as initially i wanted to pull my books from an API. However the decision was made to first focus on a functioning site, before trying to put together more complex features
 
-### Design
+# Design Planning
+
 ![Capture2](https://github.com/user-attachments/assets/6bb9ef93-3c64-4854-87ae-2822615bca7a)
 
 ![Capture3](https://github.com/user-attachments/assets/b75bf812-526e-4167-9f6a-b0618680f082)
 
+Initially there was just a need for a home page and a my library page. However since i did not use an API, a page that displays all books available on the site was added, so that users can get a short summary of what each book is about. The main page is however the 'My Library' page, where users can add, update or delete entries to their personal reading list.
 
+For mobile devices a hamburger icon replaced the clickable navbar items, as well as get rid of certain items that might take up space, like the image on the homepage. The worry was however how the table in the library would look in small devices. Ultimately i went for a scrollable table.
+
+The purpose of the site was to be as clear as possible, and include as much easy functionality, such as e.g. the logo bringing the user back to the homepage. I also wanted to build something that, if i wanted to, I could expand on later with extra functionality.
+
+---
+
+# Agile Development
 
 
 ---
