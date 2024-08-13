@@ -1,9 +1,7 @@
 # Welcome to Book Tracker!
 
 ## A Book Tracking Website.
-![Capture](https://github.com/user-attachments/assets/249a8159-e07a-45ba-9793-0490367b6cf4)
-
-
+![Capture](https://github.com/user-attachments/assets/be3d00d4-e4d7-49e8-9465-dfde7a421b6b)
 
 > Book Tracker is a website that allows the users to add, update and edit books they are reading, or plan on reading.
 
@@ -29,3 +27,4 @@
 ---
 
 # Resources
+
