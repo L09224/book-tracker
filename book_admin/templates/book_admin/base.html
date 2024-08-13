@@ -31,7 +31,12 @@
             <img src="{% static 'media/images/logotext_nobg.png' %}" alt="Book Tracker Logo" class="site-logo">
         </a>
         <nav>
-            <ul>
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="navbar-menu">
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'book_list' %}">Books</a></li>
                 {% if user.is_authenticated %}
@@ -46,6 +51,7 @@
     </div>
 </header>
 
+
     <!-- Main Content -->
     <main>
         {% block content %}{% endblock %}
@@ -55,6 +61,14 @@
     <footer>
         <p>&copy; 2024 Book Tracker by Leander Ots</p>
     </footer>
+
+    <!-- JavaScript to Toggle the Navbar Menu -->
+    <script>
+    function toggleMenu() {
+        var menu = document.querySelector('.navbar-menu');
+        menu.classList.toggle('show');
+    }
+    </script>
 
 </body>
 </html>
