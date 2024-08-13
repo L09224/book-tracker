@@ -16,9 +16,7 @@ class UserBook(models.Model):
     STATUS_CHOICES = [
         ('reading', 'Reading'),
         ('completed', 'Completed'),
-        ('on-hold', 'On-Hold'),
-        ('dropped', 'Dropped'),
-        ('plan-to-read', 'Plan to Read'),
+        ('to_read', 'Plan to Read'),
     ]
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
