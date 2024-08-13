@@ -14,7 +14,7 @@
 ## Table of contents 
 
  1. [ Data Structure Planning ](#data_planning)
- 2. [ Design Planning ](#design_planning)
+ 2. [ User Experience Design Planning ](#design_planning)
  3. [ Agile Development ](#agile-development)
  4. [ Features implemented ](#features-implemented)  
  5. [ Features Left to Implement ](#features-left-to-implement)  
@@ -79,14 +79,21 @@ I used the GitHub projects page for my user stories. I started using the project
 - Consistent styling accross all pages. The user will not see any link or redirect to an admin template
 - CSRF protection
 - Clear messaging for when a user adds, updates or deletes entries on their book list, as well as error messages if something goes wrong
-- 
+- Clear messaging for when a user is logged in on the homepage
+
 ![Capture5](https://github.com/user-attachments/assets/5f9c11ae-112c-43e5-9caf-c86bce9c61df)
 ![Capture6](https://github.com/user-attachments/assets/a2dc16c7-7519-4e06-be7f-41f78c5168c6)
+![capture7](https://github.com/user-attachments/assets/c7521dfb-6f9a-40c8-bfae-e77ff690a07a)
 
-  
 
-#Features left to implement 
+---
 
+# Features left to implement 
+
+All MVP features were implemented, however if more time was available for the project, I would implement either:
+
+1. An API that populates the site book list
+2. A form that allows users to recommend books to be added to the book list, with admin approval
 
 ---
 
@@ -106,9 +113,12 @@ I used the GitHub projects page for my user stories. I started using the project
 - Favicon.io - for generating my favicon templates from my logo
 - design.com - for letting me generate a logo for the site
 - chatGPT - for troubleshooting when no google-fu solves an issue
-- 
-- 
 
+---
+
+# Testing
+
+Testing for responsiveness was done in Firefox.
 
 
 
