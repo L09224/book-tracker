@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Book, UserBook
 from .forms import BookForm, UserBookForm
 
-# Create your views here.
+# Views
 
 def custom_logout_view(request):
     

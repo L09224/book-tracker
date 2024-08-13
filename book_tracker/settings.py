@@ -17,7 +17,7 @@ import dj_database_url
 if os.path.isfile("env.py"):
     import env
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR,'book_admin', 'templates')
 
@@ -84,12 +84,6 @@ WSGI_APPLICATION = 'book_tracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
 
 DATABASES = {
 'default':
@@ -125,7 +119,6 @@ LOGIN_REDIRECT_URL = 'book_list'
 
 # Redirect to the login page if not authenticated
 LOGIN_URL = 'login'
-
 
 
 # Internationalization
