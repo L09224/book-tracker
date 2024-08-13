@@ -10,9 +10,13 @@
         <img src="{% static 'media/images/homepage.jpg' %}" alt="Welcome Image">
     </div>
     <div class="home-text">
-        <h2>Welcome to Book Tracker</h2>
-        <p>Welcome to Book Tracker! This is your one-stop shop to keep track of your reading habits. Upon creating an account with us, you will be able to add, update and remove books from your digital library, and keep track of which page you got to. Interested? Sign up below, of if already a customer, Login!</p>
-        {% if not user.is_authenticated %}
+        {% if user.is_authenticated %}
+            <h2>Welcome back, {{ user.username }}!</h2>
+            <p>We're glad to have you back. Continue tracking your reading progress or <a href="{% url 'book_list' %}">explore more books</a>.</p>
+            <p>Check out your <a href="{% url 'user_book_list' %}">personal library</a> to see your current reading list and update your progress.</p>
+        {% else %}
+            <h2>Welcome to Book Tracker</h2>
+            <p>Welcome to Book Tracker! This is your one-stop shop to keep track of your reading habits. Upon creating an account with us, you will be able to add, update and remove books from your digital library, and keep track of which page you got to. Interested? Sign up below, or if already a customer, Login!</p>
             <div class="button-container">
                 <a href="{% url 'login' %}" class="btn">Login</a>
                 <a href="{% url 'signup' %}" class="btn">Sign Up</a>
@@ -21,4 +25,3 @@
     </div>
 </div>
 {% endblock %}
-
