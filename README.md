@@ -53,6 +53,14 @@ The purpose of the site was to be as clear as possible, and include as much easy
 
 # Agile Development
 
+## Overview
+
+![capture4](https://github.com/user-attachments/assets/5935aef0-640f-481c-ad64-a6703f98e592)
+
+I used the GitHub projects page for my user stories. I started using the project page after my initial deployment. The main purpose was to go over features that needed to be added to ensure a MVP. Over time I would add issues that might pop up, or ideas I had that would imporve functionality.
+
+### [Link to project board]([https://book-tracker-lo-007f2790e66f.herokuapp.com/](https://github.com/users/L09224/projects/3/views/1)
+
 
 ---
 
