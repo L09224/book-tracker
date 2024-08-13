@@ -7,6 +7,5 @@ function handleFormSubmit(bookId, totalPages) {
         currentPageInput.value = totalPages;
     }
     
-    // Allow the form to be submitted
     return true;
 }

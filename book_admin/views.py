@@ -74,7 +74,7 @@ def user_book_list(request):
 
     return render(request, 'book_admin/user_book_list.html', {
         'user_books': user_books,
-        'books': books,  # Passing all books to the dropdown
+        'books': books, 
         'form': form,
         'sort': sort,
         'direction': direction,
