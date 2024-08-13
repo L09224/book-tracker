@@ -13,16 +13,32 @@
 
 ## Table of contents 
 
- 1. [ UX ](#ux)
- 2. [ Agile Development ](#agile-development)
- 3. [ Features implemented ](#features-implemented)  
- 4. [ Features Left to Implement ](#features-left-to-implement)  
- 5. [ Technology used ](#technology-used) 
- 6. [ Testing ](#testing)  
- 7. [ Bugs ](#known-bugs)  
- 8. [ Deployment](#deployment)
- 9. [ Resources ](#resources)  
+ 1. [ Planning ](#planning)
+ 2. [ UX ](#ux)
+ 3. [ Agile Development ](#agile-development)
+ 4. [ Features implemented ](#features-implemented)  
+ 5. [ Features Left to Implement ](#features-left-to-implement)  
+ 6. [ Technology used ](#technology-used) 
+ 7. [ Testing ](#testing)  
+ 8. [ Bugs ](#known-bugs)  
+ 9. [ Deployment](#deployment)
  10. [ Credits and acknowledgements ](#credits-and-acknowledgements)
+
+---
+# Planning
+
+### Data Structure
+
+This site uses three models:
+
+- User model: This is Django's default user model, and is used for to signup for an account, and all the actions that go with managing a book list
+- Book model: This represents the actual books in the database. Within the current website they are added by an admin. The user cannot add new books to the site's database
+- UserBook model: This tracks the relationship between users and the books in the database. The user can pick a book from the database, and add it to their own library
+
+![Capture1](https://github.com/user-attachments/assets/e7d3d5a0-e5fd-4452-ab89-78d2e33764d5)
+
+- The above served as a MVP guide (created with dbdiagram) for how the data should interact. Ultimately not all of these fields were as useful (e.g. description). This is a MVP structure as intiially i wanted to pull my books from a API. However the decision was made to first focus on a functioning site, before trying to put together more complex features
+
 
 ---
 
@@ -40,7 +56,7 @@
 - Favicon.io - for generating my favicon templates from my logo
 - design.com - for letting me generate a logo for the site
 - chatGPT - for troubleshooting when no google-fu solves an issue
-- 
+- dbdiagram.io - To create my ERDs
 
 
 
