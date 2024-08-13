@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import TemplateView
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -8,6 +8,12 @@ from .models import Book, UserBook
 from .forms import BookForm, UserBookForm
 
 # Create your views here.
+
+def custom_logout_view(request):
+    
+    logout(request)
+    
+    return render(request, 'registration/logged_out.html')
 
 def home(request):
     return render(request, 'book_admin/home.html')
