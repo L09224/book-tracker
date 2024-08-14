@@ -130,7 +130,7 @@ All MVP features were implemented, however if more time was available for the pr
 - Testing for responsiveness was done in Firefox via the Accessibility Properties. Responsiveness was tested at different resolutions to ensure no breaks in the site at common resolutions.
 - HTML code validated with w3 validator
 - CSS code was validated with Jigsaw and received CSS level 3 + SVG
-- Python code checked with Pep8
+- Python code checked with Pep8. Errors are largely 1. 'E302 expected 2 blank lines, found 1' 2.  'E501 line too long' 
 - JS code passed through JSLint
 
 ### Automatic Testing
