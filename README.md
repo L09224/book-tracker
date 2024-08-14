@@ -118,8 +118,31 @@ All MVP features were implemented, however if more time was available for the pr
 
 # Testing
 
-Testing for responsiveness was done in Firefox.
+- Testing for responsiveness was done in Firefox via the Accessibility Properties. Responsiveness was tested at different resolutions to ensure no breaks in the site at common resolutions.
+- HTML code validated with w3 validator
+- CSS code was validated with Jigsaw and received CSS level 3 + SVG
+- Python code checked with Pep8
+- JS code passed through JSLint
 
+
+---
+
+# Deployment
+
+- Repo created in Github, updated in Gitpod
+- Deployed on Heroku
+- Connected Secret Keys to config vars
+- Connected Code Institute PostGres Database
+- Connected cloudinary static file host
+
+---
+
+Credits and Thank yous
+
+- Thank you to Lewis Dillon for all the help, as well as David Calikes for being there for any issues that popped up. Also a big thank you yo our CI cohort, who have been a wonderful group always ready to help classmates
+- Django Documentation
+- we3schools
+- Code Institute - Love Running, I think before I blog
 
 
 
