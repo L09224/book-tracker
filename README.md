@@ -152,6 +152,8 @@ All MVP features were implemented, however if more time was available for the pr
 
 #### User Navigation Tests
 
+![capture9](https://github.com/user-attachments/assets/36f4b6e1-29e8-4e5a-a536-55a5dacbd651)
+
 | Test | Result  |
 |--|--|
 | User can easily navigate through the site | Pass |
@@ -162,13 +164,18 @@ All MVP features were implemented, however if more time was available for the pr
 
 #### Account Authorisation Tests
 
+![Capture10](https://github.com/user-attachments/assets/799e98b0-c1e0-4bed-b1dd-68ea44358612)
+
 | Test | Result  |
 |--|--|
 | Only Superuser can access admin page |Pass|
 
 #### CRUD Tests
 
+![Capture8](https://github.com/user-attachments/assets/d62fff46-1d4a-4e19-967d-aa8f55803fc0)
+
 | Test |Result  |
+
 |--|--|
 |User can add a book to list | Pass |
 |User can view list of all books in system | Pass |
