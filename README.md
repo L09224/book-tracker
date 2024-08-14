@@ -175,7 +175,6 @@ All MVP features were implemented, however if more time was available for the pr
 ![Capture8](https://github.com/user-attachments/assets/d62fff46-1d4a-4e19-967d-aa8f55803fc0)
 
 | Test |Result  |
-
 |--|--|
 |User can add a book to list | Pass |
 |User can view list of all books in system | Pass |
