@@ -133,6 +133,47 @@ All MVP features were implemented, however if more time was available for the pr
 - Python code checked with Pep8
 - JS code passed through JSLint
 
+### Automatic Testing
+
+|Automatic tests| pass|
+
+### Manual testing
+
+#### Account Registration Tests
+
+| Test |Result  |
+|--|--|
+| User can create account | Pass |
+| User can log into profile | Pass |
+| User can log out of profile | Pass |
+| Messages are displaying | Pass |
+
+#### User Navigation Tests
+
+| Test | Result  |
+|--|--|
+| User can easily navigate through the site | Pass |
+| User can access Home page| Pass|
+| User access Books page |Pass|
+| User can My Library page|Pass|
+| SuperUser can access admin page|Pass|
+
+#### Account Authorisation Tests
+
+| Test | Result  |
+|--|--|
+| Only Superuser can access admin page |Pass|
+
+#### CRUD Tests
+
+| Test |Result  |
+|--|--|
+|User can add a book to list | Pass |
+|User can view list of all books in system | Pass |
+|User can edit a book's status in their library | Pass |
+|User can delete a book from their list| Pass |
+
+
 ##### [ Back to Top ](#table-of-contents)
 
 ---
@@ -164,6 +205,7 @@ All MVP features were implemented, however if more time was available for the pr
 - we3schools
 - Code Institute: Love Running, I think before I blog
 - Realpython.com for detailed information on python implementation and examples
+- Gordon Meade for readme template: https://github.com/Gordon-Meade/thebearadirectoryblog
 
 ##### [ Back to Top ](#table-of-contents)
 
