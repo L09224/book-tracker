@@ -189,6 +189,8 @@ All MVP features were implemented, however if more time was available for the pr
 # Bugs
 
 - There is a known issue where the colour of the container in which contains the login, logout, signup and homepage text is located changes colour when transitioning from low to high resolutions
+- At the moment any changes to the static directory are not being passed on when debug is turned off. At the moment this is being fixed by running the command: 'python manage.py collectstatic'. This has the effect of distorting the languages in the repo to heavily favour JS, and will need solving in the future.
+
 
 ##### [ Back to Top ](#table-of-contents)
 
