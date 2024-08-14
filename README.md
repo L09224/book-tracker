@@ -162,7 +162,8 @@ All MVP features were implemented, however if more time was available for the pr
 - Thank you to Lewis Dillon for all the help, as well as David Calikes for being there for any issues that popped up. Also a big thank you yo our CI cohort, who have been a wonderful group always ready to help classmates
 - Django Documentation
 - we3schools
-- Code Institute - Love Running, I think before I blog
+- Code Institute: Love Running, I think before I blog
+- Realpython.com for detailed information on python implementation and examples
 
 ##### [ Back to Top ](#table-of-contents)
 
