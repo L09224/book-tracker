@@ -37,7 +37,7 @@ This site uses three models:
 
 - The above served as a MVP guide (created with dbdiagram) for how the data should interact. Ultimately not all of these fields were as useful (e.g. description). This is a MVP structure as initially i wanted to pull my books from an API. However the decision was made to first focus on a functioning site, before trying to put together more complex features
 
-# Design Planning
+# User Experience Design Planning
 
 ![Capture2](https://github.com/user-attachments/assets/6bb9ef93-3c64-4854-87ae-2822615bca7a)
 
@@ -48,6 +48,8 @@ Initially there was just a need for a home page and a my library page. However s
 For mobile devices a hamburger icon replaced the clickable navbar items, as well as get rid of certain items that might take up space, like the image on the homepage. The worry was however how the table in the library would look in small devices. Ultimately i went for a scrollable table.
 
 The purpose of the site was to be as clear as possible, and include as much easy functionality, such as e.g. the logo bringing the user back to the homepage. I also wanted to build something that, if i wanted to, I could expand on later with extra functionality.
+
+##### [ Back to Top ](#table-of-contents)
 
 ---
 
@@ -68,6 +70,8 @@ I used the GitHub projects page for my user stories. I started using the project
 - Could Have: sort and filter books, different home page message depending on if a user is logged in, logo & favicon, hero images
 - Won't have: footer links for privacy policy and contact info, connection to API for importing books
 
+##### [ Back to Top ](#table-of-contents)
+
 ---
 
 # Features Implemented
@@ -85,6 +89,7 @@ I used the GitHub projects page for my user stories. I started using the project
 ![Capture6](https://github.com/user-attachments/assets/a2dc16c7-7519-4e06-be7f-41f78c5168c6)
 ![capture7](https://github.com/user-attachments/assets/c7521dfb-6f9a-40c8-bfae-e77ff690a07a)
 
+##### [ Back to Top ](#table-of-contents)
 
 ---
 
@@ -94,6 +99,8 @@ All MVP features were implemented, however if more time was available for the pr
 
 1. An API that populates the site book list
 2. A form that allows users to recommend books to be added to the book list, with admin approval
+
+##### [ Back to Top ](#table-of-contents)
 
 ---
 
@@ -114,6 +121,8 @@ All MVP features were implemented, however if more time was available for the pr
 - design.com - for letting me generate a logo for the site
 - chatGPT - for troubleshooting when no google-fu solves an issue
 
+##### [ Back to Top ](#table-of-contents)
+
 ---
 
 # Testing
@@ -124,6 +133,15 @@ All MVP features were implemented, however if more time was available for the pr
 - Python code checked with Pep8
 - JS code passed through JSLint
 
+##### [ Back to Top ](#table-of-contents)
+
+---
+
+# Bugs
+
+- There is a known issue where the colour of the container in which contains the login, logout, signup and homepage text is located changes colour when transitioning from low to high resolutions
+
+##### [ Back to Top ](#table-of-contents)
 
 ---
 
@@ -135,14 +153,18 @@ All MVP features were implemented, however if more time was available for the pr
 - Connected Code Institute PostGres Database
 - Connected cloudinary static file host
 
+##### [ Back to Top ](#table-of-contents)
+
 ---
 
-Credits and Thank yous
+# Credits and Acknowledgments
 
 - Thank you to Lewis Dillon for all the help, as well as David Calikes for being there for any issues that popped up. Also a big thank you yo our CI cohort, who have been a wonderful group always ready to help classmates
 - Django Documentation
 - we3schools
 - Code Institute - Love Running, I think before I blog
+
+##### [ Back to Top ](#table-of-contents)
 
 
 
