@@ -22,7 +22,7 @@
  7. [ Testing ](#testing)  
  8. [ Bugs ](#known-bugs)  
  9. [ Deployment](#deployment)
- 10. [ Credits and acknowledgements ](#credits-and-acknowledgements)
+ 10. [ Credits and Acknowledgements ](#credits-and-acknowledgements)
 
 ---
 # Data Structure Planning
