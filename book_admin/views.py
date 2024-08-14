@@ -171,15 +171,3 @@ def add_book_to_list(request):
         'books': books,
         'user_books': user_books
     })
-
-
-
-
-
-
-
-
-
-
-
-

@@ -9,3 +9,8 @@ function handleFormSubmit(bookId, totalPages) {
     
     return true;
 }
+
+// Function to confirm deletion of a book entry
+function confirmDelete() {
+    return confirm("Are you sure you want to delete this book from your list?");
+}

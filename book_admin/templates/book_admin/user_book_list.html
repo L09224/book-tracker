@@ -40,11 +40,19 @@
         </div>
 
         <!-- Messages for feedback -->
-        {% if messages %}
-            {% for message in messages %}
-                <div>{{ message }}</div>
-            {% endfor %}
-        {% endif %}
+        <div class="container">
+            {% if messages %}
+                <div class="message-container">
+                    {% for message in messages %}
+                        <div class="message {% if message.tags %}{{ message.tags }}-message{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+    
 
         <!-- Displaying the user's specific book list -->
         <div class="table-container">
@@ -105,7 +113,7 @@
                             </form>
                         </td>
                         <td>
-                            <form method="POST" action="{% url 'delete_user_book' user_book.id %}">
+                            <form method="POST" action="{% url 'delete_user_book' user_book.id %}" onsubmit="return confirmDelete()">
                                 {% csrf_token %}
                                 <button type="submit" name="action" value="delete">Delete</button>
                             </form>

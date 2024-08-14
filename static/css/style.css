@@ -553,3 +553,31 @@ table th a.active {
         background-color: #EDE0D4;
     }
 }
+
+
+/* Message Styling for extra visibility */
+
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 100%;
+}
+
+.success-message {
+    background-color: #B08968;
+    color: white
+}
+
+
+.error-message {
+    background-color: #B08968;
+    color: white;
+}
+
+.info-message {
+    background-color: #B08968;
+    color: white;
+}
