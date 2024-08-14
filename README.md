@@ -135,6 +135,8 @@ All MVP features were implemented, however if more time was available for the pr
 
 ### Automatic Testing
 
+| Test |Result  |
+|--|--|
 |Automatic tests| pass|
 
 ### Manual testing
